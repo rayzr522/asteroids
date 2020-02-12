@@ -388,7 +388,7 @@ function render() {
 
     // score display
     fontSize(20);
-    drawCenteredText('Score: ' + score, WIDTH / 2, 25);=
+    drawCenteredText('Score: ' + score, WIDTH / 2, 25);
 
     // debug
     if (DEBUG) {
