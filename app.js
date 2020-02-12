@@ -24,6 +24,8 @@ let ASTEROID_SHAPES = {
     1: generateAsteroidShape(1, 8, 0.5)
 }
 
+let ASTEROID_BUFFER_MULTIPLIER = 1.5
+
 let EXPLOSION_RADIUS = 25;
 // explosion time in milliseconds
 let EXPLOSION_TIME = 500;
@@ -179,7 +181,9 @@ function nextWave() {
             rot: Math.random() * Math.PI * 2
         };
 
-        if (isAsteroidColliding(newAsteroid, playerX, playerY)) {
+        if (isAsteroidColliding(newAsteroid, playerX, playerY, asteroid.type * ASTEROID_SCALE * ASTEROID_BUFFER_MULTIPLIER)) {
+            // Don't decrease the total # of asteroids
+            i--;
             continue;
         }
 
@@ -187,12 +191,12 @@ function nextWave() {
     }
 }
 
-function isAsteroidColliding(asteroid, x, y) {
+function isAsteroidColliding(asteroid, x, y, buffer = 0) {
     const distX = asteroid.x - x;
     const distY = asteroid.y - y;
     const distSquared = distX * distX + distY * distY;
 
-    return distSquared <= (asteroid.type * asteroid.type * ASTEROID_SCALE * ASTEROID_SCALE);
+    return distSquared <= (asteroid.type * asteroid.type * ASTEROID_SCALE * ASTEROID_SCALE) + buffer;
 }
 
 function logic() {
@@ -384,7 +388,7 @@ function render() {
 
     // score display
     fontSize(20);
-    drawCenteredText('Score: ' + score, WIDTH / 2, 25);
+    drawCenteredText('Score: ' + score, WIDTH / 2, 25);=
 
     // debug
     if (DEBUG) {
@@ -411,10 +415,6 @@ function loop() {
 // main()
 reset();
 setInterval(loop, 1000 / FPS);
-
-
-
-
 
 
 // quality :)
