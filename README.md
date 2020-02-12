@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="800px" src=".github/img/screenshot.png" alt="screenshot">
+</p>
+
 # Asteroids
 
 > A fun little recreation of the classic Asteroids game in 100% vanilla JavaScript
