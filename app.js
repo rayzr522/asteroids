@@ -297,7 +297,7 @@ function drawAsteroid(asteroid) {
 }
 
 function fontSize(size) {
-    g.font = size + 'px Montserrat, Roboto, sans-serif';
+    g.font = size + 'px monospace, sans-serif';
 }
 
 function drawCenteredText(text, x, y, stroke = false) {

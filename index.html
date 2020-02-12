@@ -25,11 +25,40 @@
 
         canvas {
             outline: 1px solid white;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #footer {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 5px;
+            text-align: center;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 1em;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
+    <div id="footer">
+        <a href="https://github.com/Rayzr522/asteroids">Made with <span style="color:salmon">&lt;3</span> by Rayzr</a>
+    </div>
     <div id="game"></div>
     <script type="text/javascript" src="app.js"></script>
 </body>
