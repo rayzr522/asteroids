@@ -181,7 +181,7 @@ function nextWave() {
             rot: Math.random() * Math.PI * 2
         };
 
-        if (isAsteroidColliding(newAsteroid, playerX, playerY, asteroid.type * ASTEROID_SCALE * ASTEROID_BUFFER_MULTIPLIER)) {
+        if (isAsteroidColliding(newAsteroid, playerX, playerY, newAsteroid.type * ASTEROID_SCALE * ASTEROID_BUFFER_MULTIPLIER)) {
             // Don't decrease the total # of asteroids
             i--;
             continue;
