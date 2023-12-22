@@ -29,9 +29,3 @@ Just paste it in your browser's developer console and it'll start playing :)
 - Lots of tweakable settings for those of you who know how to use a dev console :)
 
 If you have any suggestions for additions or you have an issue to report, please [create an issue report](https://github.com/Rayzr522/Asteroids/issues/new). Thanks!
-
-## Join me
-
-Looking for a place to hang out, get support, and have a good time? Want to stop by and let me know how much you love my little game? Feel free to join my Discord guild! Just click the image below to get started.
-
-[![Discord Badge](https://github.com/Rayzr522/ProjectResources/raw/master/RayzrDev/badge-small.png)](https://rayzr.dev/join)
